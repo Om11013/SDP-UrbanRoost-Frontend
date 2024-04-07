@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 const typesOfutilities = ['Cleaners', 'Milkmen', 'Carpenters', 'Plumbers', 'Painters'];
 
@@ -22,7 +23,7 @@ const Allie_add_page = () => {
     event.preventDefault();
     try {
       console.log("Request Payload:", state);
-      await axios.post("http://localhost:8080/utility/add", state);
+      await axios.post("http://13.49.241.116:8080/utility/add", state);
       console.log("New Entry done");
       console.log(state);
     } catch (error) {
@@ -44,6 +45,8 @@ const Allie_add_page = () => {
   }
 
   return (
+    <>
+      <Navbar/>
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="container mx-auto flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="w-full md:w-1/2">
@@ -83,7 +86,8 @@ const Allie_add_page = () => {
           </form>
         </div>
       </div>
-    </div>
+      </div>
+      </>
   );
 };
 

@@ -30,7 +30,7 @@ const SignIn = () => {
         return toast.error("Input field should not be empty");
       }
   
-      axios.post("http://localhost:8080/user/login", state, {
+      axios.post("http://13.49.241.116:8080/user/login", state, {
         headers: {
           "Content-Type": "application/json"
         }

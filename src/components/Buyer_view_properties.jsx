@@ -13,7 +13,7 @@ function Buyer_view_properties() {
   const [properties, setProperties] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8080/property/getAll')
+    fetch('http://13.49.241.116:8080/property/getAll')
       .then((response) => response.json())
       .then((data) => setProperties(data))
       .catch((error) => console.error('Error fetching properties:', error))

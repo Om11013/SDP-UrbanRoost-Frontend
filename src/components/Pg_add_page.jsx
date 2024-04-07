@@ -21,7 +21,7 @@ const Pg_add_page = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form Data:", state);
-    axios.post("http://localhost:8080/property/add", state)
+    axios.post("http://13.49.241.116:8080/property/add", state)
       .then(() => {
         console.log("New Entry done")
       })

@@ -30,8 +30,8 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post(`http://localhost:8080/${state.role}/add`, state)
-      await axios.post(`http://localhost:8080/user/add`, state)
+      await axios.post(`http://13.49.241.116:8080/${state.role}/add`, state)
+      await axios.post(`http://13.49.241.116:8080/user/add`, state)
 
       console.log(`${state.role} Entry done`)
       toast(`${state.role} entry done`)
