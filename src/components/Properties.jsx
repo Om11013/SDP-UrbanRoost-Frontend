@@ -8,7 +8,7 @@ const Properties = () => {
   const [prop, setProp] = useState(null)
 
   useEffect(() => {
-    fetch('http://monorail.proxy.rlwy.net:8080/property/getAll')
+    fetch('http://monorail.proxy.rlwy.net:40765/property/getAll')
       .then((response) => response.json())
       .then((data) => setProperties(data))
       .catch((error) => console.error('Error fetching properties:', error))

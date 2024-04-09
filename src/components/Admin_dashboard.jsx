@@ -10,7 +10,7 @@ function AdminDashboard() {
 
   useEffect(() => {
     axios
-      .get('http://monorail.proxy.rlwy.net:8080/user/getAll')
+      .get('http://monorail.proxy.rlwy.net:40765/user/getAll')
       .then((response) => {
         if (Array.isArray(response.data)) {
           setUsers(response.data)
@@ -25,7 +25,7 @@ function AdminDashboard() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://monorail.proxy.rlwy.net:8080/user/${id}`)
+      .delete(`http://monorail.proxy.rlwy.net:40765/user/${id}`)
       .then((response) => {
         setUsers(users.filter((user) => user.id !== id))
         toast('User Deleted')
@@ -39,7 +39,7 @@ function AdminDashboard() {
   const handleEdit = (id) => {
     const editedUser = users.find((user) => user.id === id)
     axios
-      .patch(`http://monorail.proxy.rlwy.net:8080/user/${id}`, editedUser)
+      .patch(`http://monorail.proxy.rlwy.net:40765/user/${id}`, editedUser)
       .then((response) => {
         toast('User Edited')
         toggleEdit(id)

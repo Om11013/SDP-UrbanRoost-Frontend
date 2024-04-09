@@ -21,7 +21,7 @@ const SignOut = () => {
     })
   }
 
-  //   axios.post("http://monorail.proxy.rlwy.net:8080/user/login", state, {
+  //   axios.post("http://monorail.proxy.rlwy.net:40765/user/login", state, {
   //     headers: {
   //       "Content-Type": "application/json"
   //     }
@@ -46,7 +46,7 @@ const SignOut = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://monorail.proxy.rlwy.net:8080/user/${id}`)
+      .delete(`http://monorail.proxy.rlwy.net:40765/user/${id}`)
       .then((response) => {
         setState(state.filter((state) => state.id !== id))
         console.log('User ID:', id)

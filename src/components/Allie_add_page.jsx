@@ -23,7 +23,7 @@ const Allie_add_page = () => {
     event.preventDefault()
     try {
       console.log('Request Payload:', state)
-      await axios.post('http://monorail.proxy.rlwy.net:8080/utility/add', state)
+      await axios.post('http://monorail.proxy.rlwy.net:40765/utility/add', state)
       console.log('New Entry done')
       console.log(state)
     } catch (error) {
