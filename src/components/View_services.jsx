@@ -8,7 +8,7 @@ function View_services() {
   const [allies, setallies] = useState([])
 
   useEffect(() => {
-    fetch('http://monorail.proxy.rlwy.net:40765/utility/getAll')
+    fetch('http://silent-plane-production.up.railway.app/utility/getAll')
       .then((response) => response.json())
       .then((data) => setallies(data))
       .catch((error) => console.error('Error fetching allies:', error))

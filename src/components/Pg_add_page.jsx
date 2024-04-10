@@ -22,7 +22,7 @@ const Pg_add_page = () => {
     event.preventDefault()
     console.log('Form Data:', state)
     axios
-      .post('http://monorail.proxy.rlwy.net:40765/property/add', state)
+      .post('http://silent-plane-production.up.railway.app/property/add', state)
       .then(() => {
         console.log('New Entry done')
       })

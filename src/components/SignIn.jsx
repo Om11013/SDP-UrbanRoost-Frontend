@@ -30,7 +30,7 @@ const SignIn = () => {
       }
 
       axios
-        .post('http://monorail.proxy.rlwy.net:40765/user/login', state, {
+        .post('http://silent-plane-production.up.railway.app/user/login', state, {
           headers: {
             'Content-Type': 'application/json',
           },

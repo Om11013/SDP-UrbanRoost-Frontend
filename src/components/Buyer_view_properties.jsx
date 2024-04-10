@@ -13,7 +13,7 @@ function Buyer_view_properties() {
   const [properties, setProperties] = useState([])
 
   useEffect(() => {
-    fetch('http://monorail.proxy.rlwy.net:40765/property/getAll')
+    fetch('http://silent-plane-production.up.railway.app/property/getAll')
       .then((response) => response.json())
       .then((data) => setProperties(data))
       .catch((error) => console.error('Error fetching properties:', error))

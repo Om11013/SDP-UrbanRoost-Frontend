@@ -30,8 +30,8 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post(`http://monorail.proxy.rlwy.net:40765/${state.role}/add`, state)
-      await axios.post(`http://monorail.proxy.rlwy.net:40765/user/add`, state)
+      await axios.post(`http://silent-plane-production.up.railway.app/${state.role}/add`, state)
+      await axios.post(`http://silent-plane-production.up.railway.app/user/add`, state)
 
       console.log(`${state.role} Entry done`)
       toast(`${state.role} entry done`)
