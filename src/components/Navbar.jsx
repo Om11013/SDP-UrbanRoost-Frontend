@@ -117,9 +117,9 @@ const Navbar = ({ role }) => {
             : 'fixed left-0 top-0 w-[50%] h-full border-r border-r-gray-500 bg-gray-500 ease-in-out duration-300'
         }
       >
-        <div className="flex side-block">
+        <div className="flex side-block ">
           <div className="inline-block">
-            <h1 className="p-3 w-full text-4xl text-amber-400 font-extrabold m-auto p-auto">UrbanRoost</h1>
+            <h1 className="w-auto  text-amber-400 font-extrabold m-auto p-auto">UrbanRoost</h1>
           </div>
         </div>
         <ul className="uppercase p-4">
