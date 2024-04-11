@@ -31,12 +31,9 @@ const Navbar = ({ role }) => {
           <Link to="/contactus">Contact Us</Link>
         </li>
         <li className="p-4 hover:bg-slate-700 rounded-md">
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/signup">Sign Up / Sign In</Link>
         </li>
         {console.log(role)}
-        <li className="p-4 hover:bg-slate-700 rounded-md">
-          <Link to="/signin">Sign In</Link>
-        </li>
         <li className="p-4 hover:bg-slate-700 rounded-md">
           <Link to="/signout">Sign Out</Link>
         </li>
