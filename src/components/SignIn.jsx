@@ -1,16 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import toast from 'react-hot-toast'
 import axios from 'axios'
+import { useRecoilState } from 'recoil'
+import { stateAtom } from './atom'
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN
 
 const SignIn = () => {
-  const [state, setState] = useState({
-    email: '',
-    password: '',
-  })
+  const [state, setState] = useRecoilState(stateAtom)
+
+  // const [state, setState] = useRecoilState({
+  //   email: '',
+  //   password: '',
+  //   role: '',
+  // })
   const navigate = useNavigate()
 
   const inputChange = (e) => {
@@ -20,6 +25,12 @@ const SignIn = () => {
       [name]: value,
     })
   }
+  useEffect(() => {
+    setState({
+      email: '',
+      password: '',
+    })
+  }, [])
 
   const formSubmit = async (e) => {
     try {
@@ -40,6 +51,10 @@ const SignIn = () => {
 
           console.log('User ID:', id)
           console.log('Role:', role)
+          setState({
+            ...state,
+            role: role,
+          })
 
           console.log('User verified')
           toast('User verified')

@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import toast from 'react-hot-toast'
 import axios from 'axios'
+import { useRecoilState } from 'recoil'
+import { stateAtom } from './atom'
 
 const initialState = {
   username: '',
@@ -14,6 +16,8 @@ const initialState = {
 
 const SignUp = () => {
   const [state, setState] = useState(initialState)
+  // const [state, setState] = useRecoilState(stateAtom)
+
   const navigate = useNavigate()
 
   const handleChange = (event) => {

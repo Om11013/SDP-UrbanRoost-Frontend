@@ -1,6 +1,13 @@
 import './App.css';
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 import Hero from './components/Hero';
 import SignIn from './components/SignIn';
@@ -21,6 +28,7 @@ import SignOut from './components/SignOut';
 
 function App() {
   return (
+    <RecoilRoot>
     <BrowserRouter>
       <div>
         <div>
@@ -45,7 +53,9 @@ function App() {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+      </BrowserRouter>
+      </RecoilRoot>
+
   );
 }
 
