@@ -134,7 +134,7 @@ const Navbar = () => {
             <h1 className="w-auto  text-amber-400 font-extrabold m-auto p-auto">UrbanRoost</h1>
           </div> */}
         </div>
-        <div className="bg-black opacity-30 backdrop-filter backdrop-blur-md z-10">
+        <div className="bg-black bg-opacity-30 backdrop-filter backdrop-blur-md z-10">
           <div>
             <ul className="uppercase opacity-100 p-4 text-center text-white z-20">
               <li className="py-2 border-b border-gray-600">
