@@ -24,7 +24,7 @@ const Navbar = () => {
       ...state,
       role: '',
     })
-    alert('${state.role} Logged Out')
+    alert(`${state.role} Logged Out`)
     navigate('/')
   }
 

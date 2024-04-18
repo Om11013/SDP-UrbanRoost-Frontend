@@ -11,11 +11,6 @@ axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN
 const SignIn = () => {
   const [state, setState] = useRecoilState(stateAtom)
 
-  // const [state, setState] = useRecoilState({
-  //   email: '',
-  //   password: '',
-  //   role: '',
-  // })
   const navigate = useNavigate()
 
   const inputChange = (e) => {
