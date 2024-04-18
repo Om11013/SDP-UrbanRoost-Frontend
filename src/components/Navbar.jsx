@@ -19,14 +19,13 @@ const Navbar = () => {
   }
   const navigate = useNavigate()
 
-
   const handleSignOut = () => {
     setState({
       ...state,
       role: '',
     })
-    alert('User Logged Out')
-    navigate('/signin')
+    alert('${state.role} Logged Out')
+    navigate('/')
   }
 
   return (
@@ -132,8 +131,7 @@ const Navbar = () => {
       </div>
       {/*--------------------------------------------------------------------------------------------------------------------------*/}
       <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-14 w-full h-full ease-in-out duration-300'}>
-        <div className="flex side-block ">
-        </div>
+        <div className="flex side-block "></div>
         <div className="bg-black bg-opacity-30 backdrop-filter backdrop-blur-md z-10">
           <div>
             <ul className="uppercase opacity-100 p-4 text-center text-white z-20">

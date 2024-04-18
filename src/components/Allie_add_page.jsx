@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Navbar from './Navbar'
+import { useNavigate } from 'react-router-dom'
 
 const typesOfutilities = ['Cleaners', 'Milkmen', 'Carpenters', 'Plumbers', 'Painters']
 
@@ -19,12 +20,15 @@ const Allie_add_page = () => {
     setState({ ...state, [event.target.name]: event.target.value })
   }
 
+  const navigate = useNavigate()
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
       console.log('Request Payload:', state)
       await axios.post('https://silent-plane-production.up.railway.app/utility/add', state)
       console.log('New Entry done')
+      alert('New Service Added')
       console.log(state)
     } catch (error) {
       console.error('Error occurred: ', error)
@@ -32,6 +36,7 @@ const Allie_add_page = () => {
         console.error('Response Data:', error.response.data)
       }
     }
+    navigate('/View_services', { state: { role: state.role } })
   }
 
   const handleSelectChange = (event) => {

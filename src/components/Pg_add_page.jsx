@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import Navbar from './Navbar'
 import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 
 const initialState = {
   ownerName: '',
@@ -18,6 +19,7 @@ const Pg_add_page = () => {
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.value })
   }
+  const navigate = useNavigate()
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -26,11 +28,14 @@ const Pg_add_page = () => {
       .post('https://silent-plane-production.up.railway.app/property/add', state)
       .then(() => {
         console.log('New Entry done')
+        alert('New Property Added')
         toast('New entry done')
       })
       .catch((error) => {
         console.error('Error occurred: ', error)
       })
+      navigate('/Buyer_view_properties', { state: { role: state.role } })
+
   }
 
   return (
