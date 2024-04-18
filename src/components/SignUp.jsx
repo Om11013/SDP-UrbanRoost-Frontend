@@ -39,7 +39,7 @@ const SignUp = () => {
 
       console.log(`${state.role} Entry done`)
       toast(`${state.role} entry done`)
-      alert(`${state.role} entry done`)
+      alert(`User entry done`)
 
     } catch (error) {
       console.error('Error occurred: ', error)

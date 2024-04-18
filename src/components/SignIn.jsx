@@ -52,7 +52,8 @@ const SignIn = () => {
           })
           console.log('User verified')
           toast('User verified')
-          alert(`${state.role} Verified`)
+          alert('User verified')
+
           navigate('/', { state: { role: role } })
         })
         .catch((error) => {
