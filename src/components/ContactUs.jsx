@@ -21,11 +21,11 @@ const ContactUs = () => {
               </div>
               <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-lg font-medium text-gray-900">Phone</dt>
-                <dd className="mt-1 text-base text-gray-700 sm:col-span-2">+1 (123) 456-7890</dd>
+                <dd className="mt-1 text-base text-gray-700 sm:col-span-2">+91 9876543210</dd>
               </div>
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-lg font-medium text-gray-900">Address</dt>
-                <dd className="mt-1 text-base text-gray-700 sm:col-span-2">123 Main Street, City, Country</dd>
+                <dd className="mt-1 text-base text-gray-700 sm:col-span-2">Street 123, Nadiad, India</dd>
               </div>
             </dl>
           </div>

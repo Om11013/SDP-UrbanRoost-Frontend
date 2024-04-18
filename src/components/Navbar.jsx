@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { FiMenu } from 'react-icons/fi'
 import { RxCross1 } from 'react-icons/rx'
-import { Link } from 'react-router-dom'
-import { useRecoilState, useRecoilValue } from 'recoil'
+import { Link, useNavigate } from 'react-router-dom'
+import { useRecoilState } from 'recoil'
 import { stateAtom } from './atom'
 
 const Navbar = () => {
@@ -17,6 +17,8 @@ const Navbar = () => {
   const handleMore = () => {
     setMore(!more)
   }
+  const navigate = useNavigate()
+
 
   const handleSignOut = () => {
     setState({
@@ -24,6 +26,7 @@ const Navbar = () => {
       role: '',
     })
     alert('User Logged Out')
+    navigate('/signin')
   }
 
   return (
@@ -130,9 +133,6 @@ const Navbar = () => {
       {/*--------------------------------------------------------------------------------------------------------------------------*/}
       <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-14 w-full h-full ease-in-out duration-300'}>
         <div className="flex side-block ">
-          {/* <div className="inline-block">
-            <h1 className="w-auto  text-amber-400 font-extrabold m-auto p-auto">UrbanRoost</h1>
-          </div> */}
         </div>
         <div className="bg-black bg-opacity-30 backdrop-filter backdrop-blur-md z-10">
           <div>

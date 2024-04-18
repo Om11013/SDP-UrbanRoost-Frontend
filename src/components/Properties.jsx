@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Navbar from './Navbar'
+import QR from './QR.png'
 
 const Properties = () => {
   const [properties, setProperties] = useState([])
@@ -60,10 +61,10 @@ const Properties = () => {
         <div className="flex-1">
           <Link to="/Maintenance">
             <img
-              src={'https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg'}
-              alt="Another Image"
+              src={QR}
+              alt="QR code for Maintenance"
               className="w-auto h-auto object-cover rounded-t-lg justify-center"
-              style={{ maxHeight: '80vh' }}
+              style={{ maxHeight: '60vh' }}
             />
           </Link>
         </div>

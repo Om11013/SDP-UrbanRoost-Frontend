@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Navbar from './Navbar'
+import toast from 'react-hot-toast'
 
 const initialState = {
   ownerName: '',
@@ -25,6 +26,7 @@ const Pg_add_page = () => {
       .post('https://silent-plane-production.up.railway.app/property/add', state)
       .then(() => {
         console.log('New Entry done')
+        toast('New entry done')
       })
       .catch((error) => {
         console.error('Error occurred: ', error)
