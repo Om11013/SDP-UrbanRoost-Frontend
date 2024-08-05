@@ -34,13 +34,12 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post(`https://silent-plane-production.up.railway.app/${state.role}/add`, state)
-      await axios.post(`https://silent-plane-production.up.railway.app/user/add`, state)
+      await axios.post(`https://localhost/${state.role}/add`, state)
+      await axios.post(`https://localhost/user/add`, state)
 
       console.log(`${state.role} Entry done`)
       toast(`${state.role} entry done`)
       alert(`User entry done`)
-
     } catch (error) {
       console.error('Error occurred: ', error)
     }

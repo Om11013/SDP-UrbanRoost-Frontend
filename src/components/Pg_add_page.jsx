@@ -25,7 +25,7 @@ const Pg_add_page = () => {
     event.preventDefault()
     console.log('Form Data:', state)
     axios
-      .post('https://silent-plane-production.up.railway.app/property/add', state)
+      .post('https://localhost/property/add', state)
       .then(() => {
         console.log('New Entry done')
         alert('New Property Added')
@@ -34,8 +34,7 @@ const Pg_add_page = () => {
       .catch((error) => {
         console.error('Error occurred: ', error)
       })
-      navigate('/Buyer_view_properties', { state: { role: state.role } })
-
+    navigate('/Buyer_view_properties', { state: { role: state.role } })
   }
 
   return (

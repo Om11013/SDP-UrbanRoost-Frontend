@@ -10,7 +10,7 @@ function AdminDashboard() {
 
   useEffect(() => {
     axios
-      .get('https://silent-plane-production.up.railway.app/user/getAll')
+      .get('https://localhost/user/getAll')
       .then((response) => {
         if (Array.isArray(response.data)) {
           setUsers(response.data)
@@ -25,7 +25,7 @@ function AdminDashboard() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`https://silent-plane-production.up.railway.app/user/${id}`)
+      .delete(`https://localhost/user/${id}`)
       .then((response) => {
         setUsers(users.filter((user) => user.id !== id))
         toast('User Deleted')
@@ -39,7 +39,7 @@ function AdminDashboard() {
   const handleEdit = (id) => {
     const editedUser = users.find((user) => user.id === id)
     axios
-      .patch(`https://silent-plane-production.up.railway.app/user/${id}`, editedUser)
+      .patch(`https://localhost/user/${id}`, editedUser)
       .then((response) => {
         toast('User Edited')
         toggleEdit(id)

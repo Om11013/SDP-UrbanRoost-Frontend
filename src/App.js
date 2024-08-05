@@ -24,7 +24,6 @@ import View_services from './components/View_services';
 import Admin_dashboard from './components/Admin_dashboard';
 import Properties from './components/Properties';
 import Maintenance from './components/Maintenance';
-import SignOut from './components/SignOut';
 
 function App() {
   return (
@@ -48,7 +47,6 @@ function App() {
             <Route exact path="/admin_dashboard" element={<Admin_dashboard />} />
             <Route exact path="/properties/:id" element={<Properties />} />
             <Route exact path="/maintenance" element={<Maintenance />} />     
-            <Route exact path="/signout" element={<SignOut />} />     
 
           </Routes>
         </div>

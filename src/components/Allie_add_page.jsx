@@ -26,7 +26,7 @@ const Allie_add_page = () => {
     event.preventDefault()
     try {
       console.log('Request Payload:', state)
-      await axios.post('https://silent-plane-production.up.railway.app/utility/add', state)
+      await axios.post('https://localhost/utility/add', state)
       console.log('New Entry done')
       alert('New Service Added')
       console.log(state)

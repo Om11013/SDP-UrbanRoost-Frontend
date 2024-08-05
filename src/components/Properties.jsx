@@ -9,7 +9,7 @@ const Properties = () => {
   const [prop, setProp] = useState(null)
 
   useEffect(() => {
-    fetch('https://silent-plane-production.up.railway.app/property/getAll')
+    fetch('https://localhost/property/getAll')
       .then((response) => response.json())
       .then((data) => setProperties(data))
       .catch((error) => console.error('Error fetching properties:', error))
